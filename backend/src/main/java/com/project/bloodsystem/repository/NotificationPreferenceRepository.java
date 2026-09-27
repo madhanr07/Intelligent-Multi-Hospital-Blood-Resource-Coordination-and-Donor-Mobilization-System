@@ -1,0 +1,12 @@
+package com.project.bloodsystem.repository;
+
+import com.project.bloodsystem.entity.notification.NotificationPreference;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface NotificationPreferenceRepository extends JpaRepository<NotificationPreference, Long> {
+    List<NotificationPreference> findByUserId(Long userId);
+}
