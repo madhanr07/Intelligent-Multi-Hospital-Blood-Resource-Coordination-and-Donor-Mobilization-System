@@ -174,11 +174,39 @@ For detailed role and permission information, see [docs/USER_ROLES_AND_PERMISSIO
 
 ## Development Status
 
-**Current Module:** Module 0 - Project Specification & Development Rules
+**Current Module:** Module 1 - Project Foundation
 
-**Status:** PLANNING
+**Status:** IN PROGRESS
 
-All application functionality described in this project is **PLANNED**. No implementation has been completed yet.
+### Completed Modules
+- **Module 0** - Project Specification & Development Rules ✅
+- **Module 1** - Project Foundation ✅
+
+### In Progress
+- None
+
+### Planned
+- Module 2 - Complete Database & Data Model
+- Module 3 - Authentication & RBAC
+- Module 4 - Central Admin / Institution Management
+- Module 5 - Blood Bank Management
+- Module 6 - Blood Request Management
+- Module 7 - Blood Intelligence & ML
+- Module 8 - Donor Registration & Verification
+- Module 9 - Donor Portal
+- Module 10 - Donor Mobilization
+- Module 11 - Advanced Platelet Management
+- Module 12 - Platelet Request Management
+- Module 13 - Multi-Hospital Coordination
+- Module 14 - Reservation & Transfer Workflow
+- Module 15 - Expiry, Wastage & Lifecycle Alerts
+- Module 16 - Notification System
+- Module 17 - Role-Based Dashboards & Analytics
+- Module 18 - Reports
+- Module 19 - Audit Logging
+- Module 20 - Complete System Integration
+- Module 21 - Testing & Validation
+- Module 22 - Deployment & Final Documentation
 
 The project will be implemented according to the approved module roadmap (see [docs/MODULE_ROADMAP.md](docs/MODULE_ROADMAP.md)).
 
@@ -187,7 +215,7 @@ The project will be implemented according to the approved module roadmap (see [d
 ## Planned Modules
 
 1. **Module 0** - Project Specification & Development Rules ✅
-2. **Module 1** - Project Foundation
+2. **Module 1** - Project Foundation ✅
 3. **Module 2** - Complete Database & Data Model
 4. **Module 3** - Authentication & RBAC
 5. **Module 4** - Central Admin / Institution Management
@@ -263,7 +291,7 @@ The system follows a donor-first escalation approach:
 
 ---
 
-## Getting Started (Future)
+## Getting Started
 
 ### Prerequisites
 - Java 17 or higher
@@ -272,11 +300,96 @@ The system follows a donor-first escalation approach:
 - MySQL 8.0 or higher
 - Maven 3.8 or higher
 
-### Installation (Future)
-Installation instructions will be provided in Module 22 after implementation is complete.
+### Environment Setup
 
-### Development Setup (Future)
-Development setup instructions will be provided in Module 1.
+1. Clone the repository
+2. Copy `.env.example` to `.env` and configure your environment variables:
+   ```
+   DB_HOST=localhost
+   DB_PORT=3306
+   DB_NAME=hemonexus
+   DB_USERNAME=root
+   DB_PASSWORD=<your-mysql-password>
+   ```
+
+### Backend Setup
+
+1. Navigate to the backend directory:
+   ```bash
+   cd backend
+   ```
+
+2. Build the project:
+   ```bash
+   mvn clean install
+   ```
+
+3. Run the application:
+   ```bash
+   mvn spring-boot:run
+   ```
+
+4. Verify health endpoint:
+   ```
+   http://localhost:8080/api/health
+   ```
+
+### Frontend Setup
+
+1. Navigate to the frontend directory:
+   ```bash
+   cd frontend
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open browser:
+   ```
+   http://localhost:5173
+   ```
+
+### ML Service Setup
+
+1. Navigate to the ml-service directory:
+   ```bash
+   cd ml-service
+   ```
+
+2. Create a virtual environment (recommended):
+   ```bash
+   python -m venv .venv
+   ```
+
+3. Activate the virtual environment:
+   - Windows: `.venv\Scripts\activate`
+   - Linux/Mac: `source .venv/bin/activate`
+
+4. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+5. Run the ML service:
+   ```bash
+   python main.py
+   ```
+
+6. Verify health endpoint:
+   ```
+   http://localhost:8000/health
+   ```
+
+### Database Setup
+
+The MySQL database `hemonexus` should already exist. The database schema will be created in Module 2.
 
 ---
 
@@ -306,4 +419,4 @@ This project is developed as a final-year engineering project.
 
 ---
 
-**Note:** This project is currently in the planning phase (Module 0). All features described are planned for implementation. No application functionality has been implemented yet.
+**Note:** Module 0 (Project Specification) and Module 1 (Project Foundation) have been completed. Business functionality (authentication, database schema, blood management, donor platform, platelet management, ML, coordination, dashboards, notifications, reports, audit) will be implemented in subsequent modules.

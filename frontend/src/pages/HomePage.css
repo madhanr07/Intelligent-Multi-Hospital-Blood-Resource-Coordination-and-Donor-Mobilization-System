@@ -1,0 +1,20 @@
+.home-page {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.home-page h1 {
+  color: #333;
+}
+
+.home-page .card {
+  max-width: 800px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 12px;
+}
+
+.status-section,
+.info-section {
+  margin-bottom: 1.5rem;
+}
